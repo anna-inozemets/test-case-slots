@@ -54,8 +54,10 @@ function isIOS() {
 
 if (isIOS()) {
   $('.slide__content').addClass('ios green');
+  $('p.user-agent').html(navigator.userAgent);
 } else {
   console.log('not')
+  console.log(navigator.userAgent);
 }
 
 // additional function to make request on the last slide
