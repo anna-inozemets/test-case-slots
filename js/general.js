@@ -108,10 +108,7 @@ async function loadComponent(componentPathName, slideNum) {
   initSlickSlider();
 
   $(document).ready(function () {
-    $('p.user-agent').text(`agent is: ${navigator.userAgent}`);
-
     if (isIOS()) {
-      $('body').addClass('ios');
       $('.slide__content').addClass('ios green');
     } else {
       console.log('not')

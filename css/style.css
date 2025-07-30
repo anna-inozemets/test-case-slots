@@ -109,11 +109,9 @@ p.user-agent {
   font-size: 2em;
 }
 @supports(padding: env(safe-area-inset-left)) {
-  body.ios {
+  .slide__content.ios {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-  }
-  .slide__content.ios {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: env(safe-area-inset-bottom);
