@@ -105,6 +105,9 @@ ul {
   background-color: blueviolet;
 }
 
+p.user-agent {
+  font-size: 2em;
+}
 @supports(padding: env(safe-area-inset-left)) {
   .slide__content.ios {
     padding-left: constant(safe-area-inset-left, 0px);

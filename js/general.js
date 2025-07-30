@@ -52,12 +52,12 @@ function isIOS() {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
+
+
 if (isIOS()) {
   $('.slide__content').addClass('ios green');
-  $('p.user-agent').html(navigator.userAgent);
 } else {
   console.log('not')
-  console.log(navigator.userAgent);
 }
 
 // additional function to make request on the last slide
@@ -108,6 +108,13 @@ async function loadComponent(componentPathName, slideNum) {
   gsap.from('.slide', { opacity: 0, duration: 1 });
   clearTimeout(slideSolvedActonTimeoutId);
   initSlickSlider();
+
+  $(document).ready(function () {
+    console.log($('p.user-agent'));
+    console.log(navigator.userAgent)
+
+    $('p.user-agent').text(`agent is: ${navigator.userAgent}`);
+  });
 }
 
 //window and document listeners
