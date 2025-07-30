@@ -12,7 +12,7 @@ let slideSolvedActonTimeoutId;
 const hiddenArrowClass = 'hidden';
 
 // additional varibles for slides
-const totalSlideAmount = 2;
+const totalSlideAmount = 3;
 const pathNames = Array.from(
   { length: totalSlideAmount }, (_, i) => ({ count: i + 1, pathName:`./slides/slide--${i + 1}.html` })
 );
@@ -56,6 +56,22 @@ if (isIOS()) {
   $('.slide__content').addClass('ios green');
 } else {
   console.log('not')
+}
+
+function modalControl() {
+  $('.open-modal').on('click', function () {
+    $('.slide__modal').fadeIn(500)
+  });
+  $('.close-modal').on('click', function () {
+    $('.slide__modal').fadeOut(500)
+  });
+
+  $('.slide__modal-product').on('click', function () {
+  const productIndex = Number($(this).data('slide-modal-product'));
+
+  $('.slide__modal').fadeOut(500)
+  $('.slide__products').slick('slickGoTo', productIndex - 1);
+});
 }
 
 // additional function to make request on the last slide
@@ -107,13 +123,11 @@ async function loadComponent(componentPathName, slideNum) {
   clearTimeout(slideSolvedActonTimeoutId);
   initSlickSlider();
 
-  $(document).ready(function () {
-    if (isIOS()) {
-      $('.slide__content').addClass('ios green');
-    } else {
-      console.log('not')
-    }
-  });
+  if (isIOS()) {
+    $('.slide__content').addClass('ios');
+  }
+
+  modalControl();
 }
 
 //window and document listeners
