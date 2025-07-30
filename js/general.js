@@ -111,6 +111,7 @@ async function loadComponent(componentPathName, slideNum) {
     $('p.user-agent').text(`agent is: ${navigator.userAgent}`);
 
     if (isIOS()) {
+      $('body').addClass('ios');
       $('.slide__content').addClass('ios green');
     } else {
       console.log('not')
