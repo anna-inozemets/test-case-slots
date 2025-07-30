@@ -48,6 +48,14 @@ setRealVH();
 // Пересчитывать при изменении размеров окна
 window.addEventListener('resize', setRealVH);
 
+function isIOS() {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+if (isIOS()) {
+  $('.slide__content').addClass('ios');
+}
+
 // additional function to make request on the last slide
 function lastSlideAction() {
   let id = $('#presentation', window.parent.document).attr('data-id');
