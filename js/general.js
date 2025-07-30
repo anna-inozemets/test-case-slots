@@ -53,7 +53,9 @@ function isIOS() {
 }
 
 if (isIOS()) {
-  $('.slide__content').addClass('ios');
+  $('.slide__content').addClass('ios green');
+} else {
+  console.log('not')
 }
 
 // additional function to make request on the last slide

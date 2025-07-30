@@ -102,6 +102,7 @@ ul {
   gap: 3em;
   padding: 6em 9.5em 4em;
   height: 100%;
+  background-color: blueviolet;
 }
 
 @supports(padding: env(safe-area-inset-left)) {
@@ -112,6 +113,10 @@ ul {
     padding-right: env(safe-area-inset-right);
     padding-bottom: constant(safe-area-inset-bottom);
     padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .slide__content.green {
+    background-color: green;
   }
 }
 
