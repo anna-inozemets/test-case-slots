@@ -110,13 +110,13 @@ p.user-agent {
 }
 @supports(padding: env(safe-area-inset-left)) {
   .slide__content.ios {
-    padding-left: constant(safe-area-inset-left, 0px);
-    padding-left: env(safe-area-inset-left);
-    padding-right: constant(safe-area-inset-right, 0px);
-    padding-right: env(safe-area-inset-right);
+    padding-left: constant(safe-area-inset-left, 1em);
+    padding-left: env(safe-area-inset-left, 1em);
+    padding-right: constant(safe-area-inset-right, 1em);
+    padding-right: env(safe-area-inset-right, 1em);
 
-    padding-bottom: constant(safe-area-inset-bottom, 4em);
-    padding-bottom: env(safe-area-inset-bottom, 4em);
+    padding-bottom: constant(safe-area-inset-bottom, 3em);
+    padding-bottom: env(safe-area-inset-bottom, 3em);
   }
 
   .slide__content.green {
