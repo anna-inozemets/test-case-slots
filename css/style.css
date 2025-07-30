@@ -111,8 +111,9 @@ ul {
     padding-left: env(safe-area-inset-left);
     padding-right: constant(safe-area-inset-right, 0px);
     padding-right: env(safe-area-inset-right);
-    padding-bottom: constant(safe-area-inset-bottom);
-    padding-bottom: env(safe-area-inset-bottom);
+
+    padding-bottom: constant(safe-area-inset-bottom, 4em);
+    padding-bottom: env(safe-area-inset-bottom, 4em);
   }
 
   .slide__content.green {
