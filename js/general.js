@@ -37,6 +37,17 @@ function setResponsiveFontSize() {
   });
 }
 
+function setRealVH() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Установить изначально
+setRealVH();
+
+// Пересчитывать при изменении размеров окна
+window.addEventListener('resize', setRealVH);
+
 // additional function to make request on the last slide
 function lastSlideAction() {
   let id = $('#presentation', window.parent.document).attr('data-id');

@@ -44,7 +44,7 @@ body {
   font-size: 1.2vw;
   font-weight: 400;
   color: var(--white-c);
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   max-height: -webkit-fill-available;
   overflow: hidden;
 }
@@ -59,7 +59,7 @@ ul {
   list-style: disc;
 }
 .wrapper {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   max-height: -webkit-fill-available;
 }
 .slide {
