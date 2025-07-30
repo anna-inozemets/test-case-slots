@@ -52,8 +52,6 @@ function isIOS() {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-
-
 if (isIOS()) {
   $('.slide__content').addClass('ios green');
 } else {
@@ -110,10 +108,13 @@ async function loadComponent(componentPathName, slideNum) {
   initSlickSlider();
 
   $(document).ready(function () {
-    console.log($('p.user-agent'));
-    console.log(navigator.userAgent)
-
     $('p.user-agent').text(`agent is: ${navigator.userAgent}`);
+
+    if (isIOS()) {
+      $('.slide__content').addClass('ios green');
+    } else {
+      console.log('not')
+    }
   });
 }
 
