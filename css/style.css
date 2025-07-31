@@ -114,8 +114,6 @@ ul {
 
 @supports(padding: env(safe-area-inset-left)) {
   .slide__content.ios {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
@@ -155,7 +153,7 @@ ul {
 }
 .slide__aside-content ul li {
   width: max-content;
-  font-size: 2.68em;
+  font-size: 2.65em;
   font-weight: 700;
   margin-bottom: 0.75em;
 }
@@ -218,35 +216,22 @@ ul {
 }
 .slide__products .slick-arrow {
   font-size: 1em;
-  width: 10em;
-  height: 17em;
+  width: 0;
+  height: 0;
+  border-top: solid 7em transparent;
+  border-bottom: solid 7em transparent;
   z-index: 2;
 }
 .slide__products .slick-arrow::before {
-  content: '';
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  width: 0;
-  height: 0;
-  border-top: solid 2em transparent;
-  border-bottom: solid 2em transparent;
-}
-.slide__products .slick-prev::before {
-  border-right: solid 1.5em var(--main-blue-c);
-}
-.slide__products .slick-next::before {
-  border-left: solid 1.5em var(--main-blue-c);
+  display: none;
 }
 .slide__products .slick-prev {
-  left: -1em;
+  border-right: solid 4.5em var(--main-blue-c);
+  left: 1.25em;
 }
 .slide__products .slick-next {
-  right: -1em;
+  border-left: solid 4.5em var(--main-blue-c);
+  right: 1.25em;
 }
 .slide__products .slick-dots {
   bottom: 1.5em;
@@ -467,7 +452,7 @@ ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1em;
+  bottom: 1.75em;
   font-size: 2.85em;
   color: var(--grey-c);
 }
