@@ -12,7 +12,7 @@ let slideSolvedActonTimeoutId;
 const hiddenArrowClass = 'hidden';
 
 // additional varibles for slides
-const totalSlideAmount = 3;
+const totalSlideAmount = 5;
 const pathNames = Array.from(
   { length: totalSlideAmount }, (_, i) => ({ count: i + 1, pathName:`./slides/slide--${i + 1}.html` })
 );
@@ -102,8 +102,14 @@ function lastSlideAction() {
 
 // function that update info about prev/next button
 function hideArrows() {
-  $(nextSlideButton).addClass(hiddenArrowClass);
-  $(prevSlideButton).addClass(hiddenArrowClass);
+  if ($('.slide').hasClass('slide--product')) {
+    console.log('should')
+    $(prevSlideButton).removeClass(hiddenArrowClass);
+    $(nextSlideButton).removeClass(hiddenArrowClass);
+  } else {
+    $(nextSlideButton).addClass(hiddenArrowClass);
+    $(prevSlideButton).addClass(hiddenArrowClass);
+  }
 }
 
 // function that detect oriental of device
