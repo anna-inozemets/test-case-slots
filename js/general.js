@@ -240,6 +240,7 @@ function initSlickSlider() {
 
       if (!$('.slide__slot').hasClass('half-active')) {
         $('.slide__products-content').find('.slick-arrow').fadeOut(300, () => {
+          $('button.open-modal').addClass('solved');
           $(prevSlideButton).removeClass(hiddenArrowClass);
           $(nextSlideButton).removeClass(hiddenArrowClass);
         });

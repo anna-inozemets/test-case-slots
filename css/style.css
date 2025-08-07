@@ -52,6 +52,14 @@
     transform: translateX(0.5em) rotate(-90deg) scaleX(-1);
   }
 }
+@keyframes bounceTop {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5em);
+  }
+}
 /*#endregion animations*/
 
 /*#region generalStyles*/
@@ -655,7 +663,7 @@ ul {
 .slide--1 .slide__aside-content button.open-modal {
   margin-top: auto;
   position: relative;
-  top: -1.2em;
+  top: -3.2em;
   width: 100%;
   padding: 0.6em 0.3em;
   border: solid 0.15em var(--white-c);
@@ -666,6 +674,26 @@ ul {
   cursor: pointer;
   transition: color 0.2s linear;
   text-transform: uppercase;
+}
+.slide--1 .slide__aside-content button.open-modal::before {
+  content: '';
+  position: absolute;
+  right: calc(50% - 0.875em);
+  bottom: -2.5em;
+  width: 1.75em;
+  aspect-ratio: 1 / 1;
+  transition: all 0.25s linear;
+  pointer-events: none;
+  background-image: url(../images/hand-pointer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bounceTop 3s ease-in-out infinite;
+  filter: invert(1);
+  z-index: 2;
+}
+.slide--1 .slide__aside-content button.open-modal.solved::before {
+  opacity: 0;
 }
 /*#endregion sl1*/
 
@@ -715,6 +743,9 @@ ul {
   animation: bounceLeft 3s ease-in-out infinite;
   filter: invert(66%) sepia(40%) saturate(749%) hue-rotate(175deg) brightness(88%) contrast(90%);
   z-index: 2;
+}
+.slide--2 .slide__aside-content button.open-modal.solved::before {
+  opacity: 0;
 }
 .slide--2 .slide__slots-content {
   margin-top: 2em;
