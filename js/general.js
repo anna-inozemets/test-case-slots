@@ -239,8 +239,10 @@ function initSlickSlider() {
       }
 
       if (!$('.slide__slot').hasClass('half-active')) {
-        $(prevSlideButton).removeClass(hiddenArrowClass);
-        $(nextSlideButton).removeClass(hiddenArrowClass);
+        $('.slide__products-content').find('.slick-arrow').fadeOut(300, () => {
+          $(prevSlideButton).removeClass(hiddenArrowClass);
+          $(nextSlideButton).removeClass(hiddenArrowClass);
+        });
       }
   });
 }

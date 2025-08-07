@@ -12,7 +12,17 @@
         <li>потребує відновлення</li>
       </ul>
       <button class="open-modal">Переглянути всі засоби</button>
-      <p class="slide-numbering">1/5</p>
+      <p class="slide-numbering">1/2</p>
+    </div>
+    <div class="slide__slots-content">
+      <div class="slide__slot-wrapper">
+        <p>РАНКОВА РУТИНА</p>
+        <div class="slide__slot slide__slot--day half-active" data-correct-products="[1]"></div>
+      </div>
+      <div class="slide__slot-wrapper">
+        <p>ВЕЧІРНЯ РУТИНА</p>
+        <div class="slide__slot slide__slot--night half-active" data-correct-products="[1]"></div>
+      </div>
     </div>
     <div class="slide__products-content">
       <p class="error">На жаль, цей продукт НЕ підходить</p>
@@ -49,20 +59,10 @@
         </div>
       </div>
       <div class="slide--product-buttons">
-        <button class="button--day">ОБРАТИ, ЯК ДЕННИЙ ЗАСІБ</button>
-        <button class="button--night">ОБРАТИ, ЯК НІЧНИЙ ЗАСІБ</button>
+        <button class="button--day">ОБРАТИ, ЯК РАНКОВУ РУТИНУ</button>
+        <button class="button--night">ОБРАТИ, ЯК ВЕЧІРНЮ РУТИНУ</button>
       </div>
       <p class="note">Обравши продукт, натисніть на відповідну кнопку</p>
-    </div>
-    <div class="slide__slots-content">
-      <div class="slide__slot-wrapper">
-        <p>РАНКОВА РУТИНА</p>
-        <div class="slide__slot slide__slot--day half-active" data-correct-products="[1]"></div>
-      </div>
-      <div class="slide__slot-wrapper">
-        <p>НІЧНА РУТИНА</p>
-        <div class="slide__slot slide__slot--night half-active" data-correct-products="[1]"></div>
-      </div>
     </div>
   </div>
   <div class="slide__modal">
@@ -70,33 +70,63 @@
       <button class="close-modal"><span></span><span></span></button>
       <div class="slide__modal-product slide__modal-product--1" data-slide-modal-product="1">
         <img src="./images/bottle-1.webp">
+        <p class="title">ЩОДЕННИЙ <br> ГЕЛЬ-БУСТЕР</p>
+        <p class="action">ЗМІЦНЕННЯ</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--2" data-slide-modal-product="2">
         <img src="./images/bottle-2.webp">
+        <p class="title">СИРОВАТКА <br> З ПРОБІОТИЧНИМИ ФРАКЦІЯМИ</p>
+        <p class="action">ЗАХИСТ</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--3" data-slide-modal-product="3">
         <img src="./images/bottle-3.webp">
+        <p class="title">ЗАСІБ ДЛЯ ШКІРИ <br> НАВКОЛО ОЧЕЙ</p>
+        <p class="action">ЗМІЦНЕННЯ</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--4" data-slide-modal-product="4">
         <img src="./images/bottle-4.webp">
+        <p class="title">ЗВОЛОЖУЮЧИЙ <br> ФЛЮЇД, <span class="orange">SPF 50+</span></p>
+        <p class="action">ЗАХИСТ І ЗВОЛОЖЕННЯ</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--5" data-slide-modal-product="5">
         <img src="./images/bottle-5.webp">
+        <p class="title">ЛЕГКИЙ КРЕМ <br> <span class="thin">72 ГОДИНИ ЗВОЛОЖЕННЯ</span></p>
+        <p class="action">ЗВОЛОЖЕННЯ</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--6" data-slide-modal-product="6">
         <img src="./images/bottle-6.webp">
+        <p class="title">НАСИЧЕНИЙ КРЕМ <br> <span class="thin">100 ГОДИН ЗВОЛОЖЕННЯ</span></p>
+        <p class="action">ІНТЕНСИВНЕ ЗВОЛОЖЕННЯ</p>
+        <p class="type">для сухої та дуже сухої шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--7" data-slide-modal-product="7">
         <img src="./images/bottle-7.webp">
+        <p class="title">ГЕЛЬ-СОРБЕТ <br> <span class="thin">ДО 48 ГОДИН ЗВОЛОЖЕННЯ</span></p>
+        <p class="action">МАТУВАННЯ</p>
+        <p class="type">для жирної та комбінованої шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--8" data-slide-modal-product="8">
         <img src="./images/bottle-8.webp">
+        <p class="title">НІЧНИЙ КРЕМ <br> З ЧИСТИМ <br> <span class="blue">МЕЛАТОНІНОМ</span></p>
+        <p class="action">ВІДНОВЛЕННЯ</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
       <div class="slide__modal-product slide__modal-product--9" data-slide-modal-product="9">
         <img src="./images/bottle-9.webp">
+        <p class="title">Щоденний сонцезахисний <br> невагомий флюїд, <span class="orange">SPF 50+</span></p>
+        <p class="action">захист і заспокоєння</p>
+        <p class="type">для шкіри схильної до <br> жирності та недосконалостей</p>
       </div>
       <div class="slide__modal-product slide__modal-product--10" data-slide-modal-product="10">
         <img src="./images/bottle-10.webp">
+        <p class="title">Сонцезахисний <br> невагомий флюїд <br> проти ознак <br> фотостаріння, <span class="orange">SPF 50+</span></p>
+        <p class="action">захист</p>
+        <p class="type">для всіх типів шкіри</p>
       </div>
     </div>
   </div>
