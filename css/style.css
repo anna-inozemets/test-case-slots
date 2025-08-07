@@ -684,12 +684,11 @@ ul {
   aspect-ratio: 1 / 1;
   transition: all 0.25s linear;
   pointer-events: none;
-  background-image: url(../images/hand-pointer.svg);
+  background-image: url(../images/hand-pointer--white.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   animation: bounceTop 3s ease-in-out infinite;
-  filter: invert(1);
   z-index: 2;
 }
 .slide--1 .slide__aside-content button.open-modal.solved::before {
@@ -736,12 +735,11 @@ ul {
   aspect-ratio: 1 / 1;
   transition: all 0.25s linear;
   pointer-events: none;
-  background-image: url(../images/hand-pointer.svg);
+  background-image: url(../images/hand-pointer--blue.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   animation: bounceLeft 3s ease-in-out infinite;
-  filter: invert(66%) sepia(40%) saturate(749%) hue-rotate(175deg) brightness(88%) contrast(90%);
   z-index: 2;
 }
 .slide--2 .slide__aside-content button.open-modal.solved::before {
